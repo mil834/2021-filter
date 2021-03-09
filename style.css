@@ -1,0 +1,58 @@
+  box-sizing: border-box;
+
+  body,
+  html {
+      /* Sets default font-size to 16px, ensuring 1em = 16px; */
+      font-size: 16px;
+  }
+
+  .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 5px;
+  }
+
+  #movies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .item {
+      text-align: center;
+      flex-basis: 48%;
+      display: none;
+      transition: all 0.5s ease-in-out;
+  }
+
+  .item.active {
+      display: block;
+  }
+
+  img {
+      display: block;
+      width: 50%;
+  }
+
+  select {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+  }
+
+  /* Tablet/Desktop overrides */
+  @media(min-width: 681px) {
+
+      /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+      .item {
+          flex-basis: 33%;
+      }
+
+      select {
+          width: 33%;
+      }
+  }
+
+  @media(min-width: 729px) {
+      /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+  }
